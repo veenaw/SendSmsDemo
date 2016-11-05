@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
         });
 
     }
+
     protected void sendSMSMessage() {
         Log.i("Send SMS", "");
 
@@ -43,7 +44,7 @@ public class MainActivity extends Activity {
         try {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNo, null, message, null, null);
-            Toast.makeText(getApplicationContext(), "SMS sent.Length of the message::"+msgLen,
+            Toast.makeText(getApplicationContext(), "SMS sent.Length of the message::" + msgLen,
                     Toast.LENGTH_LONG).show();
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(),
